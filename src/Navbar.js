@@ -4,7 +4,7 @@ function Navbar() {
   return (
     <nav>
         <div>
-            <h3>LoGo</h3>
+            <h3>ImageHub</h3>
         </div>
         <div>
             <input className="search-box" placeholder="Seacrh Images" type="search" />
