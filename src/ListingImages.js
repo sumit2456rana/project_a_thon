@@ -14,7 +14,6 @@ function ListingImages() {
         `https://pixabay.com/api/?key=39352543-1df32cceadf48a49caad8e66a&image_type=all&page=${page}`
       );
       const data = await resp.json();
-      // Concatenate the new data with the existing images array
       setImages((prevImages) => [...prevImages, ...data.hits]);
     } catch (error) {
       console.error("Error fetching data:", error);
@@ -30,8 +29,6 @@ function ListingImages() {
         setPage((prevPage) => prevPage + 1);
       }
     };
-
-    // Cleanup function to remove the scroll event listener when the component unmounts
     return () => {
       window.onscroll = null;
     };
@@ -48,7 +45,6 @@ function ListingImages() {
     updatedImages[index].showDetails = false;
     setImages(updatedImages);
   }
-//   document.querySelector(".image-container").children[0].style.marginTop =  "0px";
   return (
     <div className="listingImages">
       {isLoading ? <Loading /> : <div className="image-container">
