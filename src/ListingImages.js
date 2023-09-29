@@ -3,7 +3,7 @@ import Loading from "./Loading";
 import Modal from "./Modal";
 
 function ListingImages() {
-  const [page, setPage] = useState(1);
+  const [page, setPage] = useState(1); 
   const [images, setImages] = useState([]);
   const [isLoading , setIsLoading] = useState(false);
   const [largeImg , setIsLargeImg] = useState("");
